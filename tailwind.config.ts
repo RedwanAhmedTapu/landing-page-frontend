@@ -1,4 +1,6 @@
+import { Rubik } from "next/font/google";
 import type { Config } from "tailwindcss";
+
 
 export default {
   content: [
@@ -8,6 +10,10 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        syne: ['Syne', 'sans-serif'],
+        rubik: ['Rubik', 'sans-serif'],
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
