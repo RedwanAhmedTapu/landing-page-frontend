@@ -236,7 +236,7 @@ const Dashboard: React.FC = () => {
             >
               {project.image && (
                 <Image
-                  src={`${baseUrl}${project.image}`}
+                  src={`${baseUrl}${project.image.replace(/\\/g, '/')}`}
                   alt={project.title}
                   width={300}
                   height={200}

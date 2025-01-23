@@ -64,7 +64,7 @@ const ProjectDetail: React.FC = () => {
         <div className="rounded-lg overflow-hidden shadow-lg">
           {project.image ? (
             <Image
-              src={`http:/localhost:5000/${project.image.replace(/\\/g, "/")}`}
+              src={`https://landing-page-backend-9yrz.onrender.com/${project.image.replace(/\\/g, "/")}`}
               alt={project.title}
               className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
               width={800}
