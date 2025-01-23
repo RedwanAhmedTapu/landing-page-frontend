@@ -20,7 +20,7 @@ interface Project {
 
 const ProjectDetail: React.FC = () => {
   const [project, setProject] = useState<Project | null>(null);
-  const baseUrl = "http://localhost:5000/api/projects";
+  const baseUrl = "https://landing-page-backend-9yrz.onrender.com/api/projects";
   const { slug } = useParams();
 
   useEffect(() => {

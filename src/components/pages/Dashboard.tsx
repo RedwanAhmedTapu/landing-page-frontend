@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Image from "next/image";
 
-const baseUrl = "http://localhost:5000/";
+const baseUrl = "https://landing-page-backend-9yrz.onrender.com/";
 
 interface Project {
   _id: string;
