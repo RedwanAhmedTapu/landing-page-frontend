@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Image from "next/image";
 
-const baseUrl = "https://landing-page-backend-9yrz.onrender.com/";
+const baseUrl = "http://localhost:5000/";
 
 interface Project {
   _id: string;
@@ -108,7 +108,7 @@ const Dashboard: React.FC = () => {
   // Handle delete action
   const handleDelete = async (id: string) => {
     try {
-      await axios.delete(`${baseUrl}${id}`);
+      await axios.delete(`${baseUrl}api/projects/${id}`);
       fetchProjects();
     } catch (error) {
       console.error("Error deleting project:", error);
@@ -240,7 +240,7 @@ const Dashboard: React.FC = () => {
                   alt={project.title}
                   width={300}
                   height={200}
-                  className="rounded-lg mb-4"
+                  className="rounded-lg mb-4 w-full h-64"
                 />
               )}
               <h3 className="text-2xl font-bold mb-2">{project.title}</h3>

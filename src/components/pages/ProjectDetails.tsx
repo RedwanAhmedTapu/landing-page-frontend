@@ -20,7 +20,7 @@ interface Project {
 
 const ProjectDetail: React.FC = () => {
   const [project, setProject] = useState<Project | null>(null);
-  const baseUrl = "https://landing-page-backend-9yrz.onrender.com/api/projects";
+  const baseUrl = "http://localhost:5000/api/projects";
   const { slug } = useParams();
 
   useEffect(() => {
@@ -64,7 +64,7 @@ const ProjectDetail: React.FC = () => {
         <div className="rounded-lg overflow-hidden shadow-lg">
           {project.image ? (
             <Image
-              src={`https://landing-page-backend-9yrz.onrender.com/${project.image.replace(/\\/g, "/")}`}
+              src={`http://localhost:5000/${project.image.replace(/\\/g, "/")}`}
               alt={project.title}
               className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
               width={800}
@@ -102,6 +102,13 @@ const ProjectDetail: React.FC = () => {
           </button>
         </div>
       </div>
+      {/* Vector */}
+      <div
+        style={{
+          borderRadius: "58% 42% 19% 81% / 56% 79% 21% 44%",
+        }}
+        className="absolute bg-[#ffffff] opacity-[0.10] w-72 sm:w-[300px] h-64 sm:h-[350px] -top-2 left-16 blur-[40px] shadow-3xl transform -rotate-[189deg] bg-gradient-to-tl from-transparent via-white to-transparent"
+      ></div>
     </div>
   );
 };
