@@ -16,7 +16,7 @@ interface Project {
 
 const MyWorks: React.FC = () => {
   const [projects, setProjects] = useState<Project[]>([]);
-  const baseUrl = "http://localhost:5000/"; // Adjust this URL based on your backend setup
+  const baseUrl = "https://landing-page-backend-9yrz.onrender.com/"; // Adjust this URL based on your backend setup
 
   // Fetch projects when the component mounts
   useEffect(() => {
